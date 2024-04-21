@@ -29,4 +29,10 @@ option.add_argument(
 )
 
 args = parser.parse_args()
-print(args.__dict__)
+
+if args.__dict__.get('modify', ''):
+  print("modify")
+elif args.__dict__.get('silent', ''):
+  print("silent")
+elif args.__dict__.get('restore', ''):
+  print("restore")
